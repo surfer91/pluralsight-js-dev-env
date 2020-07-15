@@ -4,7 +4,8 @@
   "description": "JavaScript development environment Pluralsight course",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart":"node buildScripts/startMessage.js",
+    "start": "node buildScripts/srcServer.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/surfer91/pluralsight-js-dev-env#readme",
   "dependencies": {
+    "chalk": "^4.1.0",
     "express": "^4.17.1",
     "open": "^7.0.4"
   }

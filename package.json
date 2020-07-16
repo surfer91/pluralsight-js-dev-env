@@ -4,7 +4,7 @@
   "description": "JavaScript development environment Pluralsight course",
   "main": "index.js",
   "scripts": {
-    "prestart":"node buildScripts/startMessage.js",
+    "prestart": "node buildScripts/startMessage.js",
     "start": "node buildScripts/srcServer.js"
   },
   "repository": {
@@ -18,8 +18,17 @@
   },
   "homepage": "https://github.com/surfer91/pluralsight-js-dev-env#readme",
   "dependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "babel-loader": "^8.1.0",
     "chalk": "^4.1.0",
+    "css-loader": "^3.6.0",
     "express": "^4.17.1",
-    "open": "^7.0.4"
+    "numeral": "^2.0.6",
+    "open": "^7.0.4",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-middleware": "^3.7.2"
   }
 }

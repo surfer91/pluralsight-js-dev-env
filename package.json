@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "prestart": "node buildScripts/startMessage.js",
-    "start": "npm-run-all --parallel open:src lint:watch",
+    "start": "npm-run-all --parallel open:src lint:watch test:watch",
     "open:src": "node buildScripts/srcServer.js",
     "lint": "esw webpack.config.* src buildScripts",
-    "lint:watch": "npm run lint -- --watch"
+    "lint:watch": "npm run lint -- --watch",
+    "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
+    "test:watch":"npm run test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -24,11 +26,14 @@
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "babel-loader": "^8.1.0",
+    "chai": "^4.2.0",
     "chalk": "^4.1.0",
     "css-loader": "^3.6.0",
     "eslint": "^7.4.0",
     "eslint-plugin-import": "^2.22.0",
     "express": "^4.17.1",
+    "jsdom": "^16.3.0",
+    "mocha": "^8.0.1",
     "npm-run-all": "^4.1.5",
     "numeral": "^2.0.6",
     "open": "^7.0.4",

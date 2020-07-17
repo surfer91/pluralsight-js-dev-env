@@ -13,6 +13,6 @@ describe('index.html', () => {
   it('should say hello', () => {
     const index =new JSDOM (fs.readFileSync('./src/index.html',  {encoding:'utf8', flag:'r'}));
       const h1 =index.window.document.getElementsByTagName('h1')[0];
-      expect(h1.innerHTML).to.equal("Hello World!");
+      expect(h1.innerHTML).to.equal("Hello World?");
   })
 })
